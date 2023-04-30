@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="form-container">
+      <h1>Reseña de película</h1>
+      <form (ngSubmit)="onSubmit()">
+        <label for="review">Tu reseña:</label>
+        <textarea id="review" rows="5" [(ngModel)]="review" name="review" placeholder="Escribe tu reseña aquí" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="sentimiento" *ngIf="sentiment">
+      Sentimiento: {{ sentiment }}
+    </div>
+  </div>
+  
